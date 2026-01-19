@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 .container{
-background-color: rgb(148, 121, 184);
+background-color:rgba(26, 11, 46, 1) ;
 max-width: 1600px;
 margin: 0 auto;
 font-family: "Inter", sans-serif;
@@ -14,12 +14,10 @@ font-family: "Inter", sans-serif;
 .color-1{
 color: rgba(255,255,255,1);
 }
-.color-2{
-
-}
 
 
 /* navber style */
+.menu{visibility: hidden;}
 nav{
 display: flex;
 justify-content: space-around;
@@ -39,6 +37,7 @@ display: flex;
 }
 nav ul li{
 list-style: none;
+transition: 0.5s;
 }
 nav ul li a{
 text-decoration: none;
@@ -46,6 +45,11 @@ margin: 0 32px;
 font-size: 1rem;
 font-weight: 500;
 color: rgba(255,255,255,1);
+
+}
+nav ul li:hover{
+transform: scale(1.5);
+cursor: pointer;
 }
 .btn{
 font-size: 1rem;
@@ -56,8 +60,13 @@ border: none;
 border-radius: 10000px;
 background: linear-gradient(47.64deg,rgba(247, 233, 63, 1) ,rgba(251, 9, 180, 1) ,rgba(145, 0, 248, 1));
 cursor: pointer;
+transition: .6s;
 }
-
+.btn:hover{
+background-color: white;
+color: black;
+transform: scale(1.4);
+}
 
 /* banner style */
 
@@ -69,6 +78,18 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: 100% 100%;
 }
+.new{
+background-color: #00ff88;
+text-transform: uppercase;
+width: 75px;
+height: 38px;
+padding: 8px 16px;
+border-radius: 10000px;
+position: relative;
+top: 150px;
+right: -880px;
+}
+
 
 .hero-png{display: flex;
 justify-content: center;
@@ -78,10 +99,12 @@ height: 550px;}
 height: 350px;
 width: 350px;
 }
+
 .microphone-png{
 display: flex;
 justify-content: center;
 margin-top: -360px;
+
 }
 
 
@@ -113,7 +136,10 @@ cursor: pointer;
 padding: 12px 20px;
 background: linear-gradient(47.64deg, rgba(247, 233, 63, 1) ,rgba(251, 9, 180, 1) ,rgba(145, 0, 248, 1));
 }
-
+.spotify:hover{
+transition: .9s;
+color: black;
+}
 .subscribe{
 border-radius: 10000px;
 font-size: 1rem;
@@ -133,7 +159,7 @@ max-width: 1200px;
 margin: 0 auto;
 text-align: center;
 padding: 50px 0 120px 0;
-background-color: rgb(54, 120, 120);
+
 }
 
 .div1 h1{
@@ -174,11 +200,15 @@ text-transform: uppercase;
 }
 
 /* choose section style */
+.bg-color{
+background-color: rgba(53, 17, 101, 0.4);
+}
 
 .choose-section{
 max-width: 1200px;
 margin: 0 auto;
 padding: 120px 0;
+
 }
 .grid-container{
 display: grid;
@@ -239,7 +269,7 @@ opacity: 0.6;
 max-width: 1200px;
 margin: 0 auto;
 padding: 120px 0;
-background-color: aquamarine;
+
 }
 .featured{
 text-align: center;
@@ -255,6 +285,11 @@ gap: 30px;
 }
 .card{
 max-width: 380px;
+transition: 0.5s;
+}
+.card:hover{
+transform: scale(1.05);
+box-shadow: 0 0 50px 0 rgba(166, 128, 214, 0.4);;
 }
 .iframe{
 border-top-right-radius: 24px;
@@ -265,6 +300,7 @@ display: block;
 padding: 24px;
 background-color: rgba(53,17,101,0.4);
 border-radius: 0 0 24px 24px;
+cursor: pointer;
 }
 .card-body h3{
 font-size: 1.5rem;
@@ -360,7 +396,7 @@ gap: 40px;
 .icon{
 display: flex;
 align-items: center;
-text-align: center;
+
 }
 
 .icon img{
@@ -382,4 +418,100 @@ font-weight: 400;
 line-height: 24px;
 opacity: 0.6;
 margin-top: 32px;
+}
+
+/* responsive */
+@media screen and (max-width:576px) {
+nav
+,nav ul{
+flex-direction: column;
+}
+ul li{margin: 10px 0;
+padding: 5px;
+}
+.banner-container{
+width: 100%;
+height: 100%;
+}
+.hero-png{
+height: 500px;
+}
+.hero-circle{
+margin-bottom: 120px;
+height: 150px;
+width: 150px;
+align-items: flex-start;
+}
+.microphone{
+height: 80px;
+width: 50px;
+}
+.microphone-png{
+align-items: center;
+
+}
+.new{
+right: -240px;
+height: 30px;
+width: 60px;
+}
+
+
+
+.about-section{
+padding: 80px 20px 40px 20px;
+}
+.div{
+margin: 30px;
+padding: 15px;
+}
+.div2{
+margin-top: 50px;
+flex-wrap: wrap;
+}
+.choose-section{
+padding: 50px 0;
+}
+.grid-container{
+grid-template-columns: repeat(1,1fr);
+justify-content: center;
+gap: 5px;
+
+}
+
+.featured-section{
+padding: 50px 0;
+}
+.card-container{
+flex-direction: column;
+margin-left: 15px;
+}
+.featured{
+font-size: 2rem;
+}
+.meet-section{
+flex-direction: column;
+margin-bottom: 50px;
+}
+.div-right{
+text-align: center;
+}
+.icon-container{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 10px;
+justify-content: center;
+align-items: center;
+}
+.icon{
+justify-content: center;
+}
+footer{
+max-width: 100%;
+}
+.footer-section{
+padding-top: 50px;
+}
+
+
 }
