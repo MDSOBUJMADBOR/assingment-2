@@ -232,3 +232,56 @@ font-weight: 400;
 line-height: 24px;
 opacity: 0.6;
 }
+
+
+/* featured-section style */
+.featured-section{
+max-width: 1200px;
+margin: 0 auto;
+padding: 120px 0;
+background-color: aquamarine;
+}
+.featured{
+text-align: center;
+font-size:3rem ;
+font-weight: bold;
+line-height: 58px;
+padding-bottom: 40px;
+}
+
+.card-container{
+display: flex;
+gap: 30px;
+}
+.card{
+max-width: 380px;
+}
+.iframe{
+border-top-right-radius: 24px;
+border-top-left-radius: 24px;
+display: block;
+}
+.card-body{
+padding: 24px;
+background-color: rgba(53,17,101,0.4);
+border-radius: 0 0 24px 24px;
+}
+.card-body h3{
+font-size: 1.5rem;
+font-weight: bold;
+line-height: 29px;
+}
+.card-body p{
+font-size: 1rem;
+font-weight: 400;
+line-height: 24px;
+opacity: 0.6;
+margin-top: 12px;
+}
+.min{
+color: rgba(0,255,136,1);
+font-size: 1rem;
+font-weight: 600;
+line-height: 24px;
+margin-top: 12px;
+}
