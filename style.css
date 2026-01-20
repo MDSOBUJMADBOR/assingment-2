@@ -17,7 +17,7 @@ color: rgba(255,255,255,1);
 
 
 /* navber style */
-.menu{visibility: hidden;}
+
 nav{
 display: flex;
 justify-content: space-around;
@@ -66,6 +66,13 @@ transition: .6s;
 background-color: white;
 color: black;
 transform: scale(1.4);
+}
+
+.hr{
+opacity: 0.6;
+}
+.sm-nav{
+display: none;
 }
 
 /* banner style */
@@ -422,13 +429,27 @@ margin-top: 32px;
 
 /* responsive */
 @media screen and (max-width:576px) {
-nav
-,nav ul{
-flex-direction: column;
+
+
+.sm-nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
 }
-ul li{margin: 10px 0;
-padding: 5px;
+.sm-nav h1{
+font-size: 1.5rem;
 }
+.sm-nav i{
+color: wheat;
+}
+
+
+nav{
+display: none;
+}
+
+
 .banner-container{
 width: 100%;
 height: 100%;
@@ -456,8 +477,6 @@ height: 30px;
 width: 60px;
 }
 
-
-
 .about-section{
 padding: 80px 20px 40px 20px;
 }
@@ -483,8 +502,10 @@ gap: 5px;
 padding: 50px 0;
 }
 .card-container{
+
 flex-direction: column;
-margin-left: 15px;
+align-items: center;
+margin: 0 20px;
 }
 .featured{
 font-size: 2rem;
